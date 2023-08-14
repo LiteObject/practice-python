@@ -36,6 +36,18 @@ your project tools and avoid versioning conflicts with tools for other projects.
 - `pip uninstall <PACKAGE_NAME>`
 
 ---
+
+## Jupyter Notebook
+
+Jupyter Notebook is an open-source web application that allows users to create and share documents that contain live code, equations, visualizations, and text.
+
+Jupyter Notebook is a popular tool among data scientists. Users can use Jupyter Notebook for data cleaning and transformation, numerical simulation, statistical modeling, data visualization, and machine learning.
+
+Jupyter Notebook was formerly known as __IPython__ notebook. The project was renamed Jupyter in 2014. Jupyter Notebook is maintained by the people at Project Jupyter.
+
+## 
+
+---
 ## Helpful Links:
 - [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
 

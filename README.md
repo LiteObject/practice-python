@@ -34,6 +34,11 @@ your project tools and avoid versioning conflicts with tools for other projects.
 - `pip install git+https://github.com/.../sample-project.git@main`
 - `pip install --upgrade <PACKAGE_NAME>`
 - `pip uninstall <PACKAGE_NAME>`
+- `py -m venv --upgrade .venv`
+  - This command will upgrade the Python interpreter within the specified virtual environment, ensuring that the environment uses a more up-to-date version of Python while maintaining its installed packages and dependencies.
+  - The `-m` flag followed by venv is used to run the venv module as a script. The venv module is a built-in module in Python that is used to create and manage virtual environments.
+  - `.venv` argument specifies the path to the existing virtual environment that you want to upgrade. In this case, .venv represents the directory where the virtual environment is located. You should replace .venv with the actual path to your virtual environment directory.
+  - Putting it all together, the command `py -m venv --upgrade .venv` will upgrade the Python interpreter within the specified virtual environment, ensuring that the environment uses a more up-to-date version of Python while maintaining its installed packages and dependencies.
 
 ---
 

@@ -1,6 +1,6 @@
 ## Python Basics
 - `pip` is the Python package manager that installs, updates, uninstalls packages.
-- `venv` allows you to manage seperate package installations for dinnerent projects and is installed with Python 3 by default.
+- `venv` allows you to manage seperate package installations for different projects and is installed with Python 3 by default.
 - `conda` installed with miniconda, can be used to manage both packages and virtual environments.
 
 ## How to install Python, pip, venv

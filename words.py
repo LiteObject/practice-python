@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """
 The `words` module provides functions for retrieving and printing words from a URL.
 
@@ -15,6 +17,7 @@ Usage Example #2:
 """
 import sys
 from urllib.request import urlopen
+from bs4 import BeautifulSoup
 
 def get(url_string: str):
     """
@@ -32,7 +35,8 @@ def get(url_string: str):
         for line in story:
             line_words = line.decode('utf8').split()
             for word in line_words:
-                story_words.append(word)
+                txt = html_to_text(word)
+                story_words.append(txt)
     except IOError as e:
         print(f"URLError: {e}")
         sys.exit(1)
@@ -51,6 +55,22 @@ def print_words(items):
     for item in items:
         print(item)
 
+def html_to_text(html_str: str) -> str:
+    """
+    Converts HTML to plain text.
+    Args:
+        html_str: The HTML to convert.
+    Returns:
+        str: The plain text.
+    """
+
+    try:
+        soup = BeautifulSoup(html_str, 'html.parser')
+        text = soup.get_text()
+        return text
+    except Exception as e:
+        print(f"Error: {e}")
+        sys.exit(1)   
 
 def main(url_string_1: str):
     """
@@ -63,11 +83,7 @@ def main(url_string_1: str):
     print_words(words)
 
 # __name__ is a special variable in Python.
-# It is a string that is set to the name of the current module.
-# When you import a module, the name of the module is set to the module's name.
-# This allows you to check whether the code is being run as a script or as a module.
-# If the code is being run as a script, __name__ will be set to __main__,
-# and the code inside the if block will be executed.
+# It let's our module be executable and importable.
 
 if __name__ == '__main__':
     url = sys.argv[1]
